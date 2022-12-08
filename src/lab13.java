@@ -1,15 +1,16 @@
 
 
 public class lab13 {
-    private static java.util.ArrayList<Integer> nums = new java.util.ArrayList<>();
+    private java.util.ArrayList<Integer> nums = new java.util.ArrayList<>();
     // methods
-    public static void readData(String filename) {
+    public void readData(String filename) {
         try {
             java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(new java.io.FileInputStream(filename)));
             String inn;
             while ( (inn = input.readLine()) != null) {
                 nums.add(Integer.parseInt(inn));
             }
+            input.close();
         }
         catch (Exception e) {
             System.out.println(e.toString());
@@ -37,8 +38,9 @@ public class lab13 {
     }
     public Integer[] getResult1() {
         return nums.stream()
-                .filter(x -> x > 5)
+                .filter(x -> x % 2 == 0)
                 .filter(x -> x < 50)
+                .filter(x -> x > 5)
                 .sorted()
                 .toArray(Integer[]::new);
     }
