@@ -1,5 +1,4 @@
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
@@ -61,17 +60,23 @@ public class lab13Test
 			// put code here to populate expectedResult1 with the values in testData.get(0)
 			// so that you can use "assertArrayEquals" to verify expectedResult1 and lab.getResult1() are the same
 			expectedResult1 = new Integer[testData.get(0).size()];
-			
+			for (int i = 0; i < expectedResult1.length; i++) {
+				expectedResult1[i] = testData.get(0).get(i);
+			}
 			
 			// put code here to populate expectedResult2 with the values in testData.get(1)
 			// so that you can use "assertArrayEquals" to verify expectedResult2 and lab.getResult2() are the same
 			expectedResult2 = new Integer[testData.get(1).size()];
-			
+			for (int i = 0; i < expectedResult2.length; i++) {
+				expectedResult2[i] = testData.get(1).get(i);
+			}
 			
 			// put code here to populate expectedResult3 with the values in testData.get(2)
 			// so that you can use "assertArrayEquals" to verify expectedResult3 and lab.getResult3() are the same
 			expectedResult3 = new Integer[testData.get(2).size()];
-			
+			for (int i = 0; i < expectedResult3.length; i++) {
+				expectedResult3[i] = testData.get(2).get(i);
+			}
 		}
 		catch(Exception e)
 		{
@@ -81,32 +86,32 @@ public class lab13Test
 	}
 	@Test
 	void testTotalCount(){
-
+		assertEquals(1000, lab.getTotalCount());
 	}
 	@Test
 	void testOddCount() {
-
+		assertEquals(507, lab.getOddCount());
 	}
 	@Test
 	void testEvenCount() {
-
+		assertEquals(493, lab.getEvenCount());
 	}
 
 	@Test
 	void testDistinctGreaterThanFiveCount() {
-
+		assertEquals(94, lab.getDistinctGreaterThanFiveCount());
 	}
 	@Test
 	void testGetResults1() {
-
+		assertArrayEquals(expectedResult1, lab.getResult1());
 	}
 	@Test
 	void testGetResults2() {
-
+		assertArrayEquals(expectedResult2, lab.getResult2());
 	}
 	@Test
 	void testGetResults3() {
-
+		assertArrayEquals(expectedResult3, lab.getResult3());
 	}
 
 }

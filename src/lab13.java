@@ -2,10 +2,6 @@
 
 public class lab13 {
     private static java.util.ArrayList<Integer> nums = new java.util.ArrayList<>();
-    public static void main(String[] args) {
-        String filename = args[0];
-        readData(filename);
-    }
     // methods
     public static void readData(String filename) {
         try {
