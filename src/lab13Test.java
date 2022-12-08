@@ -1,6 +1,5 @@
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 
@@ -80,4 +79,34 @@ public class lab13Test
 			System.exit(0);
 		}		
 	}
+	@Test
+	void testTotalCount(){
+
+	}
+	@Test
+	void testOddCount() {
+
+	}
+	@Test
+	void testEvenCount() {
+
+	}
+
+	@Test
+	void testDistinctGreaterThanFiveCount() {
+
+	}
+	@Test
+	void testGetResults1() {
+
+	}
+	@Test
+	void testGetResults2() {
+
+	}
+	@Test
+	void testGetResults3() {
+
+	}
+
 }
