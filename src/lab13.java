@@ -49,11 +49,16 @@ public class lab13 {
     public Integer[] getResult2() {
         return nums.stream()
                 .limit(50)
-                .forEach();
+                .map(x -> 3 * (x*x))
+                .toArray(Integer[]::new);
     }
     public Integer[] getResult3() {
         return nums.stream()
                 .filter(x -> x % 2 != 0)
-                .sorted();
+                .map(x -> x*2)
+                .sorted()
+                .skip(20)
+                .distinct()
+                .toArray(Integer[]::new);
     }
 }
